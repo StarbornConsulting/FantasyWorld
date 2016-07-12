@@ -1,0 +1,36 @@
+static int TilePixelSize = 32;
+ 
+// Draws a tilemap from the top left, at pixel position x, y
+// x, y - the pixel position the map will be rendered from
+// map - the map to render
+// width - the width of the map in tiles
+public void RenderMyMap(int x, int y, Array map, int mapWidth)
+{
+    // Start by indexing the top left most tile
+    int tileColumn = 1;
+    int tileRow = 1;
+ 
+    for(int i = 1; map.Count(); i++)
+    {
+        // Minus 1 so that the first tile draws at 0, 0
+        int pixelPosX = x + (tileColumn - 1) * TilePixelSize;
+        int pixelPosY = y + (tileRow - 1) * TilePixelSize;
+ 
+        RenderImage(x, y, gTilePalette[gMap1Layer1[i]]);
+ 
+        // Advance to the next tile
+        tileColumn += 1;
+        if(tileColumn > mapWidth)
+        {
+            tileColumn = 1;
+            tileRow += 1;
+        }
+    }
+}
+ 
+-- How it's used in the main update loop
+public void Update()
+{
+    // Actually draws a map on screen
+    RenderMap(0, 0, gMap1Layer1, gMap1Width)
+}
