@@ -1,4 +1,4 @@
-# main game update loop
+// main game update loop
 public void Update()
 {
     float elapsedTime = GetElapsedFrameTime();
