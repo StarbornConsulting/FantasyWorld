@@ -1,4 +1,4 @@
-#Simple State Stack good for Main Game Menu
+// Simple State Stack good for Main Game Menu
 public class StateStack
 {
     Map<String, IState> mStates = new Map<String, IState>();
