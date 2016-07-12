@@ -1,0 +1,29 @@
+#Simple State Stack good for Main Game Menu
+public class StateStack
+{
+    Map<String, IState> mStates = new Map<String, IState>();
+    List<IState> mStack = List<IState>();
+ 
+    public void Update(float elapsedTime)
+    {
+        IState top = mStack.Top()
+        top.Update(elapsedTime)
+    }
+ 
+    public void Render()
+    {
+        IState top = mStack.Top()
+        top.Render()
+    }
+ 
+    public void Push(String name)
+    {
+        IState state = mStates[name];
+        mStack.Push(state);
+    }
+ 
+    public IState Pop()
+    {
+        return mStack.Pop();
+    }
+}
