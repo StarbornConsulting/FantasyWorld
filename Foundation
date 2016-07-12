@@ -1,4 +1,4 @@
-# simple state machine with no error check psuedocode
+// simple state machine with no error check psuedocode
 class StateMachine
 {
     Map<String, IState> mStates = new Map<String, IState>();
