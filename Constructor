@@ -1,0 +1,6 @@
+//creating the structure
+public AABB(Vector2 center, Vector2 halfSize)
+{
+    this.center = center;
+    this.halfSize = halfSize;
+}
