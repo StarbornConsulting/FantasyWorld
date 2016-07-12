@@ -1,0 +1,7 @@
+//collison check function 
+public bool Overlaps(AABB other)
+{
+    if ( Mathf.Abs(center.x - other.center.x) > halfSize.x + other.halfSize.x ) return false;
+    if ( Mathf.Abs(center.y - other.center.y) > halfSize.y + other.halfSize.y ) return false;
+    return true;
+}
