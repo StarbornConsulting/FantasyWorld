@@ -1,0 +1,7 @@
+# main game update loop
+public void Update()
+{
+    float elapsedTime = GetElapsedFrameTime();
+    gGameMode.Update(elapsedTime);
+    gGameMode.Render();
+}
